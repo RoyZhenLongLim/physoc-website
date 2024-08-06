@@ -1,54 +1,37 @@
-# Astro Starter Kit: Basics
+# Mantine Next.js template
 
-```sh
-npm create astro@latest -- --template basics
-```
+This is a template for [Next.js](https://nextjs.org/) app router + [Mantine](https://mantine.dev/).
+If you want to use pages router instead, see [next-pages-template](https://github.com/mantinedev/next-pages-template).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This template comes with the following features:
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- [PostCSS](https://postcss.org/) with [mantine-postcss-preset](https://mantine.dev/styles/postcss-preset)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Storybook](https://storybook.js.org/)
+- [Jest](https://jestjs.io/) setup with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- ESLint setup with [eslint-config-mantine](https://github.com/mantinedev/eslint-config-mantine)
 
-## 🚀 Project Structure
+## npm scripts
 
-Inside of your Astro project, you'll see the following folders and files:
+### Build and dev scripts
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- `dev` – start dev server
+- `build` – bundle application for production
+- `analyze` – analyzes application bundle with [@next/bundle-analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Testing scripts
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `typecheck` – checks TypeScript types
+- `lint` – runs ESLint
+- `prettier:check` – checks files with Prettier
+- `jest` – runs jest tests
+- `jest:watch` – starts jest watch
+- `test` – runs `jest`, `prettier:check`, `lint` and `typecheck` scripts
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Other scripts
 
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `storybook` – starts storybook dev server
+- `storybook:build` – build production storybook bundle to `storybook-static`
+- `prettier:write` – formats all files with Prettier
